@@ -11,3 +11,13 @@ def db_connect():
     engine = create_engine(os.getenv('DATABASE_URL'))
     engine.connect()
     return engine
+
+
+def procesar_datos_apple(df):
+    df['Date'] = pd.to_datetime(df['Date'])
+    df['month'] = df['Date'].dt.month
+    return df
+
+def filtrar_por_fecha(df, fecha_inicio, fecha_fin):
+    return df[df["Date"].between(fecha_inicio, fecha_fin)]
+
