@@ -3,7 +3,6 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.cluster import KMeans
 from sklearn.ensemble import RandomForestClassifier
 from sklearn.model_selection import train_test_split
-import numpy as np
 
 def procesar_datos_apple(df):
     df['Date'] = pd.to_datetime(df['Date'])
@@ -34,10 +33,6 @@ def analizar_convergencia_precios(df):
 
 def kmeans_clustering(df, n_clusters=3):
     """Agrupa períodos similares usando K-means"""
-    from sklearn.preprocessing import StandardScaler
-    from sklearn.cluster import KMeans
-    import numpy as np
-    
     df_copy = df.copy()
     
     # Seleccionar features para clustering
@@ -66,11 +61,6 @@ def kmeans_clustering(df, n_clusters=3):
 
 def random_forest_prediccion(df, test_size=0.2):
     """Predice si el precio subirá o bajará el siguiente dia"""
-    from sklearn.ensemble import RandomForestClassifier
-    from sklearn.model_selection import train_test_split
-    from sklearn.preprocessing import StandardScaler
-    import numpy as np
-    
     df_copy = df.copy()
     
     # Crear target: 1 si el precio sube, 0 si baja
@@ -132,8 +122,6 @@ def random_forest_prediccion(df, test_size=0.2):
 
 def calcular_rsi(prices, period=14):
     """Calcula el Relative Strength Index"""
-    import numpy as np
-    
     delta = prices.diff()
     gain = (delta.where(delta > 0, 0)).rolling(window=period).mean()
     loss = (-delta.where(delta < 0, 0)).rolling(window=period).mean()
