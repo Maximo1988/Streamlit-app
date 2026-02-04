@@ -156,8 +156,8 @@ with tab4:
             pred_color = "#d4edda" if pred == 1 else "#f8d7da"
             st.markdown(f"""
             <div style="background-color: {pred_color}; padding: 20px; border-radius: 10px; text-align: center;">
-                <h2 style="margin: 0; font-size: 1.2em;">Predicción para Mañana</h2>
-                <h1 style="margin: 10px 0; font-size: 1.5em;">{pred_txt}</h1>
+                <h2 style="margin: 0; font-size: 1.2em; color: #000000;">Predicción para Mañana</h2>
+                <h1 style="margin: 10px 0; font-size: 2.2em; color: #000000;">{pred_txt}</h1>
             </div>
             """, unsafe_allow_html=True)
             

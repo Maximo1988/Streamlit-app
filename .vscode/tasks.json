@@ -1,0 +1,22 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Run Streamlit (venv)",
+			"type": "shell",
+			"command": "C:/Users/marga/OneDrive/Escritorio/Mis Documentos/Desarrollador/DATA_SCIENCE/Streamlit_app/Streamlit-app/.venv/Scripts/python.exe",
+			"args": [
+				"-m",
+				"streamlit",
+				"run",
+				"C:/Users/marga/OneDrive/Escritorio/Mis Documentos/Desarrollador/DATA_SCIENCE/Streamlit_app/Streamlit-app/src/app.py"
+			],
+			"isBackground": true,
+			"problemMatcher": [],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}
+	]
+}
